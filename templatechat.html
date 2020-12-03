@@ -2,100 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chat dengan diriku Badri 2019</title>
+	<title>Chat dengan diriku</title>
 	<link rel="stylesheet" type="text/css" href="chat.css">
 </head>
 <body>
-	
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">			
-			<div class="otherBubble other">
-				question?
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">			
-			<div class="ownBubble own">
-			answer
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
+	<script type="text/javascript" src="chat.js"></script>
+	<script type="text/javascript">
+	var quesAns = [
+		{
+			'question':"apakah aku cinta padamu ?",
+			'answer':"harus lah !, kamu kan aku juga",
+		},
+		{
+			'question':"jadi kamu ngobrol dengan dirimu sendiri ? hehe",
+			'answer':"ya, bukan gila ya wkwk",
+		},
 
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">			
-			<div class="otherBubble other">
-				question?
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">			
-			<div class="ownBubble own">
-			answer
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
-
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">			
-			<div class="otherBubble other">
-				question?
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">			
-			<div class="ownBubble own">
-			answer
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
-
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">			
-			<div class="otherBubble other">
-				question?
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">			
-			<div class="ownBubble own">
-			answer
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
-
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">			
-			<div class="otherBubble other">
-				question?
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">			
-			<div class="ownBubble own">
-			answer
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
-
-	<!-- 
-		nanti belajar loop javascript
-https://stackoverflow.com/questions/11398522/create-a-div-using-loop#
-<script type="text/javascript">
-	var toAdd = document.createDocumentFragment();
-	for(var i=0; i < 11; i++){
-	   var newDiv = document.createElement('div');
-	   newDiv.className = 'ansbox';
-	   toAdd.appendChild(newDiv);
-	}
-
-	document.appendChild(toAdd);
+	]
+	generate(quesAns);
 </script>	
 
-	 -->
 </body>
 </html>

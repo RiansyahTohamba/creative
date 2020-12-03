@@ -13,14 +13,14 @@
 .inlineContainer {
   display: inline-flex;
 }
-.inlineContainer.own {
+.inlineContainer.penanya {
   flex-direction: row-reverse;
 }
 .inlineIcon {
   width:20px;
   object-fit: contain;
 }
-.ownBubble {
+.penanyaBubble {
 	min-width: 60px;
 	max-width: 700px;
 	padding: 14px 18px;
@@ -40,13 +40,13 @@
 	border: 1px solid #54788e;
   
 }
-.own {
+.penanya {
 	align-self: flex-end;
 }
 .other {
 	align-self: flex-start;
 }
-span.own,
+span.penanya,
 span.other{
   font-size: 14px;
   color: grey;
