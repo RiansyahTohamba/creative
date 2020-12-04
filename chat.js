@@ -12,7 +12,7 @@ function generate(quesAns) {
 
 	   var penBubble = document.createElement('div');
 	   penBubble.className = 'penanyaBubble penanya';
-	   penBubble.textContent = obj.question ;
+	   penBubble.innerHTML = obj.question ;
 	   penInline.appendChild(penBubble);	   
 
 	   var penBubWra = document.createElement('div');
@@ -25,7 +25,7 @@ function generate(quesAns) {
 
 	   var penBubble = document.createElement('div');
 	   penBubble.className = 'otherBubble other';
-	   penBubble.textContent = obj.answer;
+	   penBubble.innerHTML = obj.answer;
 	   penInline.appendChild(penBubble);	   
 	});
     document.body.appendChild(mainCont);

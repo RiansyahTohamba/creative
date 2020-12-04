@@ -6,41 +6,44 @@
 	<link rel="stylesheet" type="text/css" href="chat.css">
 </head>
 <body>
-<!-- saya mau buat loop through bubbleWrapper -->
-
-<!-- 
-//impact of dispersion coupling, dari tabel 162
-Dispersed Coupling Design flaws correlate with post release software defects, but not strongly in all the analysed systems. 
-There is no design flaw that  consistently correlates more than others do in all the systems. In some systems, there is no design flaw that strongly correlates with defects.
-Cacat Dispersed Coupling Design berkorelasi dengan cacat perangkat lunak pasca rilis, tetapi tidak kuat di semua sistem yang dianalisis.
-Tidak ada cacat desain yang secara konsisten berkorelasi lebih dari yang lain di semua sistem. Dalam beberapa sistem, tidak ada cacat desain yang berkorelasi kuat dengan cacat.
-
-// hasil pencarian 'dispersion coupling' pertama kali 
-	Kami memilih enam kode bau yang mengacu pada literatur, untuk menemukan yang paling berbahaya sehubungan dengan dampaknya pada prediksi kesalahan dan rawan perubahan.
-	Kode bau yang dipilih adalah: Kelas Dewa, Kelas Data, Metode Otak, Bedah Senapan, Kopling Tersebar, dan Rantai Pesan.
-
-
-//	alasan pemilihan smell DCO
-	We use code smells impact as first parameter to select six code smells from the list of 22 presented by Fowler in [51], as described in Section 6.1. We start our investigation from a survey published -->
-
-
-
-	
-<!-- nanti belajar loop javascript -->
-<!-- https://stackoverflow.com/questions/11398522/create-a-div-using-loop# -->
 <script type="text/javascript" src="chat.js"></script>
 <script type="text/javascript">
 	var quesAns = [
 		{
-			'question':"apakah ferme menyebutkan bahwa DCO berbahaya?",
-			'answer':"tidak,ferme et al hanya state bahwa dia hanya memilih 6 smell saja.",
+			'question':"kenapa harus dimulai dengan riset mengenai smell DCO ?",
+			'answer':"saya mengikut pola dari badri2019, dimana dia menyebutkan alasan pemilihan smell clone dikarenakan smell clone sering muncul di kode program. <br> Kita tahu bersama, programmer tidak punya banyak waktu maka tidak semua smell harus diatasi, hanya yang benar-benar worth saja yang harus diatasi",
 		},
 		{
-			'question':"apakah dia punya dasar kenapa 'hanya' memilih 6 smell ??",
-			'answer':"We start our investigation from a survey published  by Zhang [136] in 2011. This survey explores most of the literature related to code smells. We also take into account the knpenanya literature from our previous study related to code smells [7] and the top ten pages of results sorted by relevance, returned by the following search query by Google Scholar [141] at the date of 2013-03-07:",
+			'question':"dan indikasi <b> worth </b> adalah ?",
+			'answer':"ya, itu tadi <br> tingkat bahaya smell-nya seperti apa ? <br> apakah smell merusak quality dari program ? <br> seberapa sering dia muncul di kode program? atau seberapa sering programmer menuliskan smell yang sama ? <br> bagaimana presepsi smell nya dari developer ?",
 		},
-
-	]
+		{
+			'question':"oke, kita kembali ke textbook ferme yang menjadi literatur utama kita dalam membahas DCO. Apakah ferme menyebutkan hasil kajiannya tentang smell DCO ? ",
+			'answer':"ya disebutkan pada tabel 162, 163 dan 164",
+		},
+		{
+			'question':"Apakah isi dari tabel 162, 163 dan 164 itu ?",
+			'answer':"Tabel 162 impact smell on software quality <br> tabel 163 smell numerosity <br> tabel 164 smell impact on quality dimension <br>",
+		},
+		{
+			'question':"Loh, tabel 162 dan 164 sepertinya sama ? smell on software quality dan smell on quality dimension bedanya dimana?",
+			'answer':"bedanya adalah <br> tabel 162 untuk blablabla sedangkan <br> tabel 164 adalah blabla",
+		},
+		{
+			'question':"kalau tabel 162, baris mengenai smell DCO membahas apa? ",
+			'answer':"isinya Dispersed Coupling Design flaws correlate with post release software defects, but not strongly in all the analysed systems. Cacat Dispersed Coupling Design berkorelasi dengan cacat perangkat lunak pasca rilis, tetapi tidak kuat di semua sistem yang dianalisis. There is no design flaw that  consistently correlates more than others do in all the systems. In some systems, there is no design flaw that strongly correlates with defects. Tidak ada cacat desain yang secara konsisten berkorelasi lebih dari yang lain di semua sistem. Dalam beberapa sistem, tidak ada cacat desain yang berkorelasi kuat dengan cacat.",
+		},
+		
+		{
+			'question':"apakah ferme, awalnya, menyebutkan bahwa DCO berbahaya?",
+			'answer':"tidak,ferme et al hanya state bahwa dia hanya memilih 6 smell saja, lalu mereka akan coba meneliti blabla",
+		},
+		{
+			'question':"apakah dia punya dasar kenapa 'hanya' memilih 6 smell ?",
+			'answer':"We use code smells impact as first parameter to select six code smells from the list of 22 presented by Fowler in [51]We start our investigation from a survey published  by Zhang [136] in 2011. This survey explores most of the literature related to code smells. We also take into account the knpenanya literature from our previous study related to code smells [7] and the top ten pages of results sorted by relevance, returned by the following search query by Google Scholar [141] at the date of 2013-03-07:",
+		},
+		
+	];
 	generate(quesAns);
 </script>	
 
