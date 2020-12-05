@@ -3,7 +3,7 @@
     <script>
       (async () => {
       	// recipes/contents/
-        const response = await fetch('https://api.github.com/repos/riansyahtohamba/timeline-riansyah/contents/');
+        const response = await fetch('https://api.github.com/repos/riansyahtohamba/creative/contents/chats');
         const data = await response.json();
         let htmlString = '<ul>';
         for (let file of data) {
