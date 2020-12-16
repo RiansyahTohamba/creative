@@ -7,6 +7,14 @@ jehad small-busines
 6. memberikan lapangan kerja adalah dakwah nahi munkar juga. 
 7. menutup lapangan kerja haram tapi tidak memberikan alternatif juga bukan solusi.
 
-
+https://www.ilo.org/wcmsp5/groups/public/---asia/---ro-bangkok/---ilo-jakarta/documents/publication/wcms_695134.pdf
 ketemu dokumen ILO tentang challenge small business in indonesia
 ada small and medium enterprises (SMEs)
+
+masalah di demand?
+
+Below are key findings from the research along with recommendations grouped by regulatory and macro environment, supply, and demand for SMEs. 
+
+1. grouped by regulatory and macro environment
+2. supply side
+3. demand or customer side
