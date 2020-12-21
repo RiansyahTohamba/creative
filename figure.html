@@ -1,21 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Figures </title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+	
 </head>
 <body>
-<table>
-	<!-- pakai auto tabel saja -->
-	<tr><th>name</th><th>Description</th></tr>
-	<tr>
-		<td>Tom Preston-Werner</td>
-		<td>?</td>
-	</tr>
-	<tr>
-		<td>Andres</td>
-		<td>C# is a modern object-oriented programming language developed in 2000 by Anders Hejlsberg at Microsoft as a rival to Java (which it is quite similar to). It was created because Sun, (later bought by Oracle) did not want Microsoft to make changes to Java, so Microsoft chose to create their own language instead.</td>
-	</tr>
+<div class="container">
+  <div class="row">
+  	<br><br><br>
+  </div>
+  <div class="row">
+    
+    <div class="col-sm col-4">
+      <table id="mytable" class="display" style="width:100%">
+	  </table>		
+    </div>
+  </div>
+</div>
 		
-</table>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		let figures = [
+			{ 
+				name: 'Anders Hejlsberg', 
+				mulaikenal: '2020',
+			  	expertise :'ProLang Creator (PASCAL, C#)',
+			  	company: 'Microsoft'
+			},
+			{ 
+				name: 'Mark Ethan Trostler', 
+				mulaikenal: '2017',
+			  	expertise :'Javascript',
+			  	company: 'Google'
+			},
+			{ 
+				name: 'Nicholas Zakkas', 
+				mulaikenal: '2017',
+			  	expertise :'Javascript',
+			  	company: 'Yahoo!'
+			},
+			{ 
+				name: 'Nat Friedman', 
+				mulaikenal: '2020',
+			  	expertise :'-',
+			  	company: 'github'
+			},
+			{ 
+				name: 'Miryung Kim', 
+				mulaikenal: '2020',
+			  	expertise :'Empirical Software Engineering',
+			  	company: 'University of California'
+			},
+			{ 
+				name: 'Thomas Ziemmermann', 
+				mulaikenal: '2020',
+			  	expertise :'Empirical Software Engineering',
+			  	company: 'Microsoft'
+			},
+			{ 
+				name: 'Norman Fenton', 
+				mulaikenal: '2019',
+			  	expertise :'Empirical Software Engineering',
+			  	company: 'QM University L'
+			},
+			{ 
+				name: 'Jehad Ad Dallal', 
+				mulaikenal: '2019',
+			  	expertise :'Empirical Software Engineering',
+			  	company: 'Kuwait University'
+			}, 
+			{
+				name: 'Alessio Ferrari', 
+				mulaikenal: '2020',
+			  	expertise :'Empirical Software Engineering',
+			  	company: 'University PISA'
+			},
+			{ 
+				name: 'Romi Satria Wahono', 
+				mulaikenal: '2012',
+			  	expertise :'Machine Learning Software Engineering',
+			  	company: 'Activision'
+			},
+			{ 
+				name: 'Roger Pressman', 
+				mulaikenal: '2013',
+			  	expertise :'Software Engineering',
+			  	company: '-'
+			},
+			{ 
+				name: 'DHH', 
+				mulaikenal: '2018',
+			  	expertise :'WEB Framework',
+			  	company: '-'
+			},
+		];
+
+		let table = '<thead><tr><th>Name</th><th>Mulai Kenal</th><th>Expertise</th><th>(Ex)Company</th></tr></thead> <tbody>';
+		figures.forEach(function(d){
+		  table += '<tr>';
+		  table += '<td>'+d.name+'</td>';
+		  table += '<td>'+d.mulaikenal+'</td>';
+		  table += '<td>'+d.expertise+'</td>';
+		  table += '<td>'+d.company+'</td>';
+		  table += '</tr>';
+		})
+
+		table += '</tbody>';
+
+		$('#mytable').empty().html(table);
+	    $('#mytable').DataTable();		
+	} );
+</script>
 </body>
 </html>
