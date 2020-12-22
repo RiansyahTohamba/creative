@@ -2,10 +2,18 @@
 <html>
 <head>
 	<title>Figures </title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.7/css/rowReorder.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.7/js/dataTables.rowReorder.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
 	
 </head>
 <body>
@@ -16,7 +24,7 @@
   <div class="row">
     
     <div class="col-sm col-4">
-      <table id="mytable" class="display" style="width:100%">
+      <table id="mytable" class="display nowrap" style="width:100%">
 	  </table>		
     </div>
   </div>
@@ -26,6 +34,72 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		let figures = [
+			{ 
+				name: 'Kent Beck', 
+				mulaikenal: '2013',
+			  	expertise :'Software Development',
+			  	company: 'Agile'
+			},
+			{ 
+				name: 'Joshua Partogi', 
+				mulaikenal: '2015',
+			  	expertise :'Software Development',
+			  	company: 'Agile'
+			},
+			{ 
+				name: 'Martin Fowler', 
+				mulaikenal: '2015',
+			  	expertise :'Software Development',
+			  	company: 'Agile'
+			},
+			{ 
+				name: 'Robert Cecil Martin', 
+				mulaikenal: '2016',
+			  	expertise :'Software Development',
+			  	company: 'Agile'
+			},
+			{ 
+				name: 'Itamar Trauring', 
+				mulaikenal: '2016',
+			  	expertise :'Software Development',
+			  	company: 'Google'
+			},
+			{ 
+				name: 'Hillel Wayne', 
+				mulaikenal: '2020',
+			  	expertise :'Empirical Software Engineering',
+			  	company: '-'
+			},
+			{ 
+				name: 'Fred Brooks', 
+				mulaikenal: '2019',
+			  	expertise :'Human in Software Engineering',
+			  	company: 'IBM'
+			},
+			{ 
+				name: 'Lehman', 
+				mulaikenal: '2019',
+			  	expertise :'Software Evolution',
+			  	company: 'IBM'
+			},
+			{ 
+				name: 'Belady', 
+				mulaikenal: '2019',
+			  	expertise :'Software Evolution',
+			  	company: 'IBM'
+			},
+			{ 
+				name: 'Ryan Dahl', 
+				mulaikenal: '2016',
+			  	expertise :'Nodejs Creator',
+			  	company: '-'
+			},
+			{ 
+				name: 'Victor Basili', 
+				mulaikenal: '2019',
+			  	expertise :'ProLang Creator (PASCAL, C#)',
+			  	company: 'NASA'
+			},
 			{ 
 				name: 'Anders Hejlsberg', 
 				mulaikenal: '2020',
@@ -100,20 +174,25 @@
 			},
 		];
 
-		let table = '<thead><tr><th>Name</th><th>Mulai Kenal</th><th>Expertise</th><th>(Ex)Company</th></tr></thead> <tbody>';
+		let htmlTable = '<thead><tr><th>Name</th><th>Mulai Kenal</th><th>Expertise</th><th>(Ex)Company</th></tr></thead> <tbody>';
 		figures.forEach(function(d){
-		  table += '<tr>';
-		  table += '<td>'+d.name+'</td>';
-		  table += '<td>'+d.mulaikenal+'</td>';
-		  table += '<td>'+d.expertise+'</td>';
-		  table += '<td>'+d.company+'</td>';
-		  table += '</tr>';
+		  htmlTable += '<tr>';
+		  htmlTable += '<td>'+d.name+'</td>';
+		  htmlTable += '<td>'+d.mulaikenal+'</td>';
+		  htmlTable += '<td>'+d.expertise+'</td>';
+		  htmlTable += '<td>'+d.company+'</td>';
+		  htmlTable += '</tr>';
 		})
 
-		table += '</tbody>';
+		htmlTable += '</tbody>';
 
-		$('#mytable').empty().html(table);
-	    $('#mytable').DataTable();		
+		$('#mytable').empty().html(htmlTable);
+	    var table = $('#mytable').DataTable( {
+	        rowReorder: {
+	            selector: 'td:nth-child(2)'
+	        },
+	        responsive: true
+	    } );
 	} );
 </script>
 </body>
