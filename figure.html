@@ -24,7 +24,7 @@
   <div class="row">
     
     <div class="col-sm col-4">
-      <table id="mytable" class="display nowrap" style="width:100%">
+      <table id="mytable" class="display responsive nowrap" style="width:100%">
 	  </table>		
     </div>
   </div>
@@ -33,7 +33,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		let figures = [
+		let jsonData = [
 			{ 
 				name: 'Kent Beck', 
 				mulaikenal: '2013',
@@ -174,25 +174,17 @@
 			},
 		];
 
-		let htmlTable = '<thead><tr><th>Name</th><th>Mulai Kenal</th><th>Expertise</th><th>(Ex)Company</th></tr></thead> <tbody>';
-		figures.forEach(function(d){
-		  htmlTable += '<tr>';
-		  htmlTable += '<td>'+d.name+'</td>';
-		  htmlTable += '<td>'+d.mulaikenal+'</td>';
-		  htmlTable += '<td>'+d.expertise+'</td>';
-		  htmlTable += '<td>'+d.company+'</td>';
-		  htmlTable += '</tr>';
-		})
 
-		htmlTable += '</tbody>';
-
-		$('#mytable').empty().html(htmlTable);
-	    var table = $('#mytable').DataTable( {
-	        rowReorder: {
-	            selector: 'td:nth-child(2)'
-	        },
+	    $('#mytable').dataTable({
+	        data: jsonData,
+	        columns: [
+	            { data: 'name',title: 'Nama' },
+	            { data: 'mulaikenal',title: 'Mulai Kenal' },
+	            { data: 'expertise',title: 'Expertise' },
+	            { data: 'company',title: '(Ex)Company' },
+	        ],
 	        responsive: true
-	    } );
+	    });
 	} );
 </script>
 </body>
