@@ -24,6 +24,7 @@
   <div class="row">
     
     <div class="col-sm col-4">
+    	<h2 id="myFigures"></h2>
       <table id="mytable" class="display responsive nowrap" style="width:100%">
 	  </table>		
     </div>
@@ -34,7 +35,24 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		let jsonData = [
-		
+			{ 
+				name: 'Claes Wohlin', 
+				mulaikenal: '2020',
+			  	expertise :'Empirical Software Engineering',
+			  	company: '-'
+			},
+			{ 
+				name: 'Ivar Jacobson', 
+				mulaikenal: '2013',
+			  	expertise :'UML',
+			  	company: 'Ericson'
+			},
+			{ 
+				name: 'Grady Booch', 
+				mulaikenal: '2013',
+			  	expertise :'UML',
+			  	company: '-'
+			},
 			{ 
 				name: 'José Valim', 
 				mulaikenal: '2018',
@@ -191,9 +209,15 @@
 			  	expertise :'Smell Code Threshold Derivation',
 			  	company: '-'
 			},
+			{ 
+				name: 'Bill Gates', 
+				mulaikenal: '2010',
+			  	expertise :'Billionare',
+			  	company: '-'
+			},
 		];
-
-
+		var total = jsonData.length;
+		$('#myFigures').text(total+' Software Figures in my life');
 	    $('#mytable').dataTable({
 	        data: jsonData,
 	        columns: [
