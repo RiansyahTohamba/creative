@@ -16,7 +16,7 @@
   <div class="item">
     <div id="timeline">
       <div>
-        <section class="year" id="20xx">
+        <section class="year" id="2010">
           <h3>2010</h3>          
           <section>
             <ul>
@@ -175,6 +175,48 @@
     </div>
   </div>
 </div>
-<script async src="https://btcwidget.com/btcwidgetsrc.js"></script>  
+<!-- <script async src="https://btcwidget.com/btcwidgetsrc.js"></script>   -->
+<script>
+// main app pada react bertipe function
+function App(){
+
+}
+
+class Author{
+  constructor(name, year){
+    this.name = name;
+    this.year = year;  
+  }
+  
+
+  ieeeFormat = function (){
+    console.info(`[${this.name},${this.year}]`);
+  }
+
+  apaFormat = function (){
+    console.info(`(${this.name},${this.year})`);
+  }
+
+  getPublications = () => {
+    console.info(`Looking for another ${this.name} publication`)
+  }    
+}
+
+const hegedus = new Author("Hegedüs", 2010); 
+const alshayeb = new Author("Al Shayeb",2009)
+console.info("List of references (in APA Format):")
+hegedus.apaFormat();
+alshayeb.apaFormat();
+console.info("List of references (in IEEE Format):")
+hegedus.ieeeFormat();
+alshayeb.ieeeFormat();
+alshayeb.getPublications();
+
+
+
+
+// todo: nanti coba pakai jquery untuk input html 
+// $('#myFigures').text(total+' Figures in Software Development which inspired me');
+</script>
 </body>
 </html>
