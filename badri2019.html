@@ -9,10 +9,12 @@
 </head>
 <body>
 <div class="container">
+  
   <div class="header">
     <h1>Related work</h1>
     <h2>Mourad Badri 2019</h2>
   </div>
+
   <div class="item">
     <div id="timeline">
       <div>
@@ -187,18 +189,26 @@ class Author{
     this.name = name;
     this.year = year;  
   }
-  
 
-  ieeeFormat = function (){
+  ieeeFormat(){
     console.info(`[${this.name},${this.year}]`);
   }
 
-  apaFormat = function (){
+  apaFormat(){
     console.info(`(${this.name},${this.year})`);
   }
 
+  // milik object bukan milik prototype
   getPublications = () => {
     console.info(`Looking for another ${this.name} publication`)
+  }    
+
+  // Author.prototype.setDeadline(conference)
+  // ditambahkan ke prototype
+  setDeadline(conference)  {
+    console.info(`Process for all Author`)
+    console.info(`When ${conference} is closed?`)
+    
   }    
 }
 
@@ -207,13 +217,20 @@ const alshayeb = new Author("Al Shayeb",2009)
 console.info("List of references (in APA Format):")
 hegedus.apaFormat();
 alshayeb.apaFormat();
+
 console.info("List of references (in IEEE Format):")
 hegedus.ieeeFormat();
 alshayeb.ieeeFormat();
+
+alshayeb.getPublications = () => {
+  console.info('it was overriden here');
+}
+
 alshayeb.getPublications();
+hegedus.getPublications();
 
-
-
+hegedus.setDeadline('ICACSIS conferences');
+console.log(hegedus);
 
 // todo: nanti coba pakai jquery untuk input html 
 // $('#myFigures').text(total+' Figures in Software Development which inspired me');
